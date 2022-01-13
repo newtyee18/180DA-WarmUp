@@ -1,10 +1,11 @@
 # References used:
-# https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
-# https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
-# https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html
-# https://stackoverflow.com/questions/51699162/im-having-error-with-cv2-findcontours
-# https://gist.github.com/bigsnarfdude/d811e31ee17495f82f10db12651ae82d
-# https://stackoverflow.com/questions/51699162/im-having-error-with-cv2-findcontours
+# 1) https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
+# 2) https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
+# 3) https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html
+# 4) https://stackoverflow.com/questions/51699162/im-having-error-with-cv2-findcontours
+# 5) https://gist.github.com/bigsnarfdude/d811e31ee17495f82f10db12651ae82d
+# 6) https://stackoverflow.com/questions/51699162/im-having-error-with-cv2-findcontours
+# 7) https://stackoverflow.com/questions/22588146/tracking-white-color-using-python-opencv
 
 from __future__ import print_function
 import cv2 as cv
@@ -15,8 +16,8 @@ from matplotlib import pyplot as plt
 
 cap = cv.VideoCapture(0)
 
-lower1 = np.array([0,0,230])
-upper1 = np.array([0,0,255])
+lower1 = np.array([70,60,160])          #lower HSV threshold for cyan
+upper1 = np.array([135,255,255])        #upper HSV threshold for cyan
 lower2 = np.array([220,220,220])
 upper2 = np.array([255,255,255])
 kernelOpen = np.ones((7,7))
