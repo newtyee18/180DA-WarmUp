@@ -1,3 +1,11 @@
+# References used:
+# https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
+# https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
+# https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html
+# https://stackoverflow.com/questions/51699162/im-having-error-with-cv2-findcontours
+# https://gist.github.com/bigsnarfdude/d811e31ee17495f82f10db12651ae82d
+# https://stackoverflow.com/questions/51699162/im-having-error-with-cv2-findcontours
+
 from __future__ import print_function
 import cv2 as cv
 import numpy as np
