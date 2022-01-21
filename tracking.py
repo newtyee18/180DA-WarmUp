@@ -72,9 +72,9 @@ while(True):
     ret,thresh1 = cv.threshold(gray,127,255,cv.THRESH_BINARY)
 
     # Kmeans for rgb
-    reshaped_rgb = rgb.reshape((rgb.shape[0] * rgb.shape[1], 3)) # comment out if want to get bounding box video
-    clt = KMeans(n_clusters=5) # comment out if want to get bounding box video; kmeans is REALLY SLOW AND WILL LAG VIDEO
-    clt.fit(reshaped_rgb) # comment out if want to get bounding box video
+    # reshaped_rgb = rgb.reshape((rgb.shape[0] * rgb.shape[1], 3)) # comment out if want to get bounding box video
+    # clt = KMeans(n_clusters=5) # comment out if want to get bounding box video; kmeans is REALLY SLOW AND WILL LAG VIDEO
+    # clt.fit(reshaped_rgb) # comment out if want to get bounding box video
 
     contours, h = cv.findContours(hsv_mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
     for c in contours:
@@ -85,12 +85,12 @@ while(True):
     
     cv.drawContours(hsv, contours, -1, (255, 255, 0), 1)
     # Display the resulting frame
-    hist = find_histogram(clt) # comment out if want to get bounding box video
-    bar = plot_colors2(hist, clt.cluster_centers_) # comment out if want to get bounding box video
-    cv.imshow("frame", rgb) # change rgb to hsv to get bounding box video
-    plt.axis("off") # comment out if want to get bounding box video
-    plt.imshow(bar) # comment out if want to get bounding box video
-    plt.show() # comment out if want to get bounding box video
+    # hist = find_histogram(clt) # comment out if want to get bounding box video
+    # bar = plot_colors2(hist, clt.cluster_centers_) # comment out if want to get bounding box video
+    cv.imshow("frame", hsv) # change rgb to hsv to get bounding box video
+   # plt.axis("off") # comment out if want to get bounding box video
+   # plt.imshow(bar) # comment out if want to get bounding box video
+   # plt.show() # comment out if want to get bounding box video
     if cv.waitKey(1) & 0xFF == ord('q'):
         break
 
